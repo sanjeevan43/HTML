@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanjeeva Moorthy's Portfolio</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: black; /* Black background */
+            color: #fff; /* White text color for contrast */
+            overflow-x: hidden;
+        }
+
+        header {
+            text-align: center;
+            padding: 50px;
+            background: linear-gradient(120deg, #ff0000, #ff8080);
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            animation: slide-in 1.5s ease-out;
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin: 10px 0;
+            color: white;
+        }
+
+        header p {
+            margin: 10px 0 0;
+            font-size: 1.2em;
+            color: #fff4f4;
+        }
+
+        @keyframes slide-in {
+            from {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .profile-photo {
+            margin: 20px auto;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid white;
+            background: url('IMG_20241230_211137_600.webp') no-repeat center center/cover;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #ff1a1a;
+            padding: 15px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 1.1em;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffe6e6;
+            transform: scale(1.1);
+        }
+
+        section {
+            padding: 50px;
+            text-align: center;
+            animation: fade-in 1.5s ease-in;
+        }
+
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        section h2 {
+            font-size: 2.5em;
+            color: #b30000;
+            margin-bottom: 20px;
+        }
+
+        section p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            color: #660000;
+        }
+
+        .skills, .contact {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .skills div, .contact div {
+            background-color: white;
+            padding: 20px;
+            border-radius: 15px;
+            width: 250px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .skills div:hover, .contact div:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #ff1a1a;
+            color: white;
+            box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        a {
+            color: #b30000;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #ff4d4d;
+        }
+
+        .contact div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .contact div i {
+            font-size: 1.5em;
+            color: #b30000;
+            margin-bottom: 10px;
+        }
+
+        /* Updated Contact Styles */
+        .contact div h3 {
+            font-size: 1.5em;
+            color: #b30000;
+        }
+
+        .contact div p {
+            font-size: 1.2em;
+            color: #660000;
+        }
+
+        .contact div a {
+            color: #ff4d4d;
+            font-weight: bold;
+        }
+
+        .contact div a:hover {
+            color: #ff0000;
+        }
+
+        /* Add Font Awesome CDN */
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    </style>
+</head>
+<body>
+    <header>
+        <div class="profile-photo"></div>
+        <h1>Sanjeeva Moorthy</h1>
+        <p>A Visionary Thinker, Passionate Coder, and Future Innovator</p>
+    </header>
+
+    <nav>
+        <a href="#about">About Me</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Hello! I am Sanjeeva Moorthy, a young and ambitious Computer Science student with a knack for solving complex problems and crafting innovative solutions. I believe in the power of technology to transform lives and aim to leave a lasting impact in the tech world. Outside coding, I enjoy exploring new places and diving into creative hobbies.</p>
+        <p>Date of Birth: 30/03/2007</p>
+        <p>Son of: Madesh</p>
+        <p>School: <a href="https://maps.app.goo.gl/PFHdueLQWYxm5ZVn8" target="_blank">Anchetty Higher Secondary School, Krishnagiri</a></p>
+    </section>
+
+    <section id="skills">
+        <h2>My Skills</h2>
+        <div class="skills">
+            <div>
+                <h3>Programming Languages</h3>
+                <p>HTML, C, C++, Swift, Java</p>
+            </div>
+            <div>
+                <h3>Learning</h3>
+                <p>SQL, SwiftUI</p>
+            </div>
+            <div>
+                <h3>Tech Interests</h3>
+                <p>Building dynamic websites, mobile app development, backend systems</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>My Projects</h2>
+        <p>I am actively working on innovative projects to solve real-world problems. Stay tuned for my latest creations!</p>
+        <div class="skills">
+            <div>
+                <h3>Portfolio Website</h3>
+                <p>Built an interactive and visually stunning portfolio to showcase my skills.</p>
+            </div>
+            <div>
+                <h3>Quiz App</h3>
+                <p>Developed a fun and educational app for students to test their knowledge.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <div class="contact">
+            <div>
+                <!-- Updated Icon for Email -->
+                <i class="fas fa-envelope"></i>
+                <h3>Email</h3>
+                <p><a href="mailto:sanjeevamoorthy35@gmail.com">sanjeevamoorthy35@gmail.com</a></p>
+            </div>
+            <div>
+                <!-- Updated Icon for Phone -->
+                <i class="fas fa-phone-alt"></i>
+                <h3>Phone</h3>
+                <p><a href="tel:+919080750511">+91 9080750511</a></p>
+            </div>
+            <div>
+                <!-- Updated Icon for Social Media -->
+                <i class="fab fa-instagram"></i>
+                <h3>Social Media</h3>
+                <p><a href="https://www.instagram.com/msking_43/?hl=en" target="_blank">Instagram</a></p>
+                <p><a href="https://www.linkedin.com/in/sanjeeva-moorthy-0b7650344" target="_blank">LinkedIn</a></p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Sanjeeva Moorthy. Dream Big, Innovate Often.</p>
+    </footer>
+</body>
+</html>
