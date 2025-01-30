@@ -3,22 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sanjeeva Moorthy's Portfolio</title>
+    <title>Love Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome CDN -->
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
         body {
             margin: 0;
             font-family: 'Poppins', sans-serif;
-            background-color: black; /* Black background */
-            color: #fff; /* White text color for contrast */
+            background: linear-gradient(120deg, #f7b7a3, #ff6a6a);
+            color: #333;
             overflow-x: hidden;
         }
 
         header {
             text-align: center;
             padding: 50px;
-            background: linear-gradient(120deg, #ff0000, #ff8080);
+            background: linear-gradient(120deg, #ff4e50, #ff9a8b);
             box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
             animation: slide-in 1.5s ease-out;
         }
@@ -48,13 +49,19 @@
 
         .profile-photo {
             margin: 20px auto;
-            width: 150px;
-            height: 150px;
+            width: 200px;
+            height: 200px;
             border-radius: 50%;
             border: 5px solid white;
-            background: url('IMG_20241230_211137_600.webp') no-repeat center center/cover;
             box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
             animation: bounce 2s infinite;
+        }
+
+        .profile-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         @keyframes bounce {
@@ -69,7 +76,7 @@
         nav {
             display: flex;
             justify-content: center;
-            background-color: #ff1a1a;
+            background-color: #ff4e50;
             padding: 15px;
             position: sticky;
             top: 0;
@@ -108,7 +115,7 @@
 
         section h2 {
             font-size: 2.5em;
-            color: #b30000;
+            color: #d50000;
             margin-bottom: 20px;
         }
 
@@ -142,7 +149,7 @@
         footer {
             text-align: center;
             padding: 20px;
-            background-color: #ff1a1a;
+            background-color: #ff4e50;
             color: white;
             box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.1);
         }
@@ -160,47 +167,132 @@
             color: #ff4d4d;
         }
 
-        .contact div {
+        .contact-form {
+            background: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            border: 2px solid #ff4e50;
+            animation: form-entry 0.5s ease-out;
+        }
+
+        @keyframes form-entry {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .contact-form h3 {
+            margin-bottom: 20px;
+            font-size: 2em;
+            color: #d50000;
+            text-align: center;
+        }
+
+        .contact-form .form-group {
+            margin-bottom: 20px;
+        }
+
+        .contact-form .form-group label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: block;
+            color: #555;
+        }
+
+        .contact-form .form-group input,
+        .contact-form .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            font-size: 1em;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        .contact-form .form-group input:focus,
+        .contact-form .form-group textarea:focus {
+            border-color: #ff4e50;
+        }
+
+        .contact-form .form-group textarea {
+            resize: vertical;
+        }
+
+        .contact-form button {
+            padding: 12px 25px;
+            background-color: #ff4e50;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            background-color: #ff9a8b;
+        }
+
+        .contact-info {
             display: flex;
-            flex-direction: column;
-            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 40px;
         }
 
-        .contact div i {
+        .contact-info div {
+            text-align: center;
+            max-width: 250px;
+        }
+
+        .contact-info i {
+            font-size: 2.5em;
+            color: #ff4e50;
+        }
+
+        .contact-info h3 {
             font-size: 1.5em;
-            color: #b30000;
-            margin-bottom: 10px;
-        }
-
-        /* Updated Contact Styles */
-        .contact div h3 {
-            font-size: 1.5em;
-            color: #b30000;
-        }
-
-        .contact div p {
-            font-size: 1.2em;
+            margin: 10px 0;
             color: #660000;
         }
 
-        .contact div a {
-            color: #ff4d4d;
+        .contact-info p {
+            font-size: 1.1em;
+            margin: 5px 0;
+        }
+
+        .contact-info a {
+            color: #ff4e50;
+            text-decoration: none;
             font-weight: bold;
         }
 
-        .contact div a:hover {
-            color: #ff0000;
+        .contact-info a:hover {
+            color: #ff9a8b;
         }
-
-        /* Add Font Awesome CDN */
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     </style>
 </head>
 <body>
     <header>
-        <div class="profile-photo"></div>
-        <h1>Sanjeeva Moorthy</h1>
-        <p>A Visionary Thinker, Passionate Coder, and Future Innovator</p>
+        <div class="profile-container">
+            <div class="profile-photo">
+                <img src="/WhatsApp Image 2024-12-31 at 12.34.11_2c648827.jpg" alt="Profile Photo">
+            </div>
+            <h1>SANJEEVA MOORTHY.M</h1>
+            <h3>King Of Dark</h3>
+            <p>A Passionate Heart, A Creative Soul</p>
+        </div>
     </header>
 
     <nav>
@@ -212,10 +304,11 @@
 
     <section id="about">
         <h2>About Me</h2>
-        <p>Hello! I am Sanjeeva Moorthy, a young and ambitious Computer Science student with a knack for solving complex problems and crafting innovative solutions. I believe in the power of technology to transform lives and aim to leave a lasting impact in the tech world. Outside coding, I enjoy exploring new places and diving into creative hobbies.</p>
+        <p>Hey there! I'm a romantic at heart with a passion for bringing my ideas to life through technology. I believe in creating connections that go beyond code and aim to infuse love and creativity into everything I do. When I'm not coding, I love exploring nature, making memories with loved ones, and chasing dreams that make my heart flutter.</p>
         <p>Date of Birth: 30/03/2007</p>
         <p>Son of: Madesh</p>
         <p>School: <a href="https://maps.app.goo.gl/PFHdueLQWYxm5ZVn8" target="_blank">Anchetty Higher Secondary School, Krishnagiri</a></p>
+        <p>Address: <a href="https://maps.app.goo.gl/StPLDZFZMeoJ3yGj6" target="_blank">View My Address</a></p>
     </section>
 
     <section id="skills">
@@ -223,7 +316,7 @@
         <div class="skills">
             <div>
                 <h3>Programming Languages</h3>
-                <p>HTML, C, C++, Swift, Java</p>
+                <p>HTML, C, C++, Swift</p>
             </div>
             <div>
                 <h3>Learning</h3>
@@ -238,46 +331,54 @@
 
     <section id="projects">
         <h2>My Projects</h2>
-        <p>I am actively working on innovative projects to solve real-world problems. Stay tuned for my latest creations!</p>
+        <p>Each project I work on is a piece of my heart! Here are a few of the creations I've poured my soul into:</p>
         <div class="skills">
             <div>
-                <h3>Portfolio Website</h3>
-                <p>Built an interactive and visually stunning portfolio to showcase my skills.</p>
+                <h3>Romantic Website</h3>
+                <p>A website celebrating love, art, and passion, built with an elegant and romantic touch.</p>
             </div>
             <div>
-                <h3>Quiz App</h3>
-                <p>Developed a fun and educational app for students to test their knowledge.</p>
+                <h3>Love Letter App</h3>
+                <p>An app designed to help users write heartfelt love letters with ease and style.</p>
             </div>
         </div>
     </section>
 
     <section id="contact">
         <h2>Contact Me</h2>
-        <div class="contact">
+        <p>I'd love to hear from you! Whether you have a question, a comment, or just want to connect, feel free to send me a message!</p>
+
+        <div class="contact-info">
             <div>
-                <!-- Updated Icon for Email -->
                 <i class="fas fa-envelope"></i>
                 <h3>Email</h3>
                 <p><a href="mailto:sanjeevamoorthy35@gmail.com">sanjeevamoorthy35@gmail.com</a></p>
-            </div>
+            </div> <br>
             <div>
-                <!-- Updated Icon for Phone -->
-                <i class="fas fa-phone-alt"></i>
+                <i class="fas fa-phone"></i>
                 <h3>Phone</h3>
                 <p><a href="tel:+919080750511">+91 9080750511</a></p>
             </div>
             <div>
-                <!-- Updated Icon for Social Media -->
                 <i class="fab fa-instagram"></i>
-                <h3>Social Media</h3>
+                <h3>Instagram</h3>
                 <p><a href="https://www.instagram.com/msking_43/?hl=en" target="_blank">Instagram</a></p>
+            </div>
+            <div>
+                <i class="fab fa-linkedin"></i>
+                <h3>LinkedIn</h3>
                 <p><a href="https://www.linkedin.com/in/sanjeeva-moorthy-0b7650344" target="_blank">LinkedIn</a></p>
+            </div>
+            <div>
+                <i class="fab fa-facebook"></i>
+                <h3>Facebook</h3>
+                <p><a href="https://www.facebook.com/profile.php?id=100073221678888" target="_blank">Facebook</a></p>
             </div>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2025 Sanjeeva Moorthy. Dream Big, Innovate Often.</p>
+        <p>© 2025 Sanjeeva Moorthy. All rights reserved.</p>
     </footer>
 </body>
 </html>
